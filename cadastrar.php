@@ -1,4 +1,4 @@
-<?php   //  exit (print_r ($_POST));
+<?php    exit (print_r ($_POST));
 include_once "Conexao.php";
 
 try   {

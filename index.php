@@ -104,12 +104,12 @@
          <fieldset>
              <div id="campo">
                 <label><strong>Selecione os complementos</strong></label><br>
-                <input type="checkbox" id="complemento1" name="complemento1" value="Bacon">
-                <label for="complemento1">Bacon</label>
-                <input type="checkbox" id="complemento2" name="complemento2" value="Linguiça">
-                <label for="complemento2">Linguiça</label>
-                <input type="checkbox" id="complemento3" name="complemento3" value= "Queijo Parmesão">
-                <label for="complemento3">Queijo Parmesão </label>
+                <input type="checkbox" id="bacon" name="bacon" value="Bacon">
+                <label for="bacon">Bacon</label>
+                <input type="checkbox" id="linguica" name="linguica" value="Linguiça">
+                <label for="linguica">Linguiça</label>
+                <input type="checkbox" id="queijo_parmesao" name="queijo_parmesao" value= "Queijo Parmesão">
+                <label for="queijo_parmesao">Queijo Parmesão </label>
              </div>
          </fieldset>
 
