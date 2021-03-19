@@ -35,31 +35,31 @@
             <div id="campo">
                 <label><strong>Qual o tamanho da batata?</strong></label>
                 <div id="campo">
-                    <input type="radio" name="tamanho" id="G" value="Grande" checked>
-                    <label for="G">Grande</label>
+                    <input type="radio" name="tamanho" id="Grande" value="Grande" checked>
+                    <label for="Grande">Grande</label>
                 </div> 
                 <div id="campo">
-                    <input type="radio" name="tamanho" id="M" value="Média">
-                    <label for="M">Média</label>
+                    <input type="radio" name="tamanho" id="Media" value="Media">
+                    <label for="Media">Média</label>
                 </div>   
                 <div id="campo"> 
-                    <input type="radio" name="tamanho" id="P" value="Pequena">
-                    <label for="P">Pequena</label>
+                    <input type="radio" name="tamanho" id="Pequena" value="Pequena">
+                    <label for="Pequena">Pequena</label>
                 </div> 
 
                 <div id="campo">
                     <label><strong>Opções de entrega</strong></label>
                     <div id="campo">
-                        <input type="radio" name="entrega"id="E" value="Deivery"> 
-                        <label for="E">Delivery</label>
+                        <input type="radio" name="entrega"id="Delivery" value="Delivery"> 
+                        <label for="Delivery">Delivery</label>
                    </div>
                    <div id="campo">
-                       <input type="radio" name="entrega"id="R" value="Retirar"> 
-                       <label for="R">Retirar</label>
+                       <input type="radio" name="entrega"id="Retirar" value="Retirar"> 
+                       <label for="Retirar">Retirar</label>
                    
                    
-                       <input type="radio" name="entrega"id="L" value="Local"> 
-                       <label for="L">Comer no Local</label>
+                       <input type="radio" name="entrega"id="Local" value="Local"> 
+                       <label for="Local">Comer no Local</label>
                    </div> 
                 
             </div>
@@ -67,12 +67,13 @@
          <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Qual forma de pagamento</strong></label>
-                <select id="pagamento">
+                <select name="pagamento" required>
                     <option selected disabled value="">Selecione</option>
-                    <option>Cartão de crédito</option> 
-                    <option>Dinheiro</option>
-                    <option>VA</option>
-                    <option>VR</option>
+                    <option value="cartao_credito">Cartão de crédito</option> 
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao_debito">Débito</option>
+                     <option value="vale_alimentacao">VA</option>
+                    <option value="vale_refeicao">VR</option>
                 </select>    
             </div>        
             
@@ -84,18 +85,18 @@
         <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Selecione os tipos de molhos desejado pelo cliente</strong></label><br>
-                <input type="checkbox" id="molho1" name="molho1" value="Catchup">
-                <label for="molho1">Catchup</label>
-                <input type="checkbox" id="molho2" name="molho2" value="Mostarda">
-                <label for="molho2">Mostarda</label>
-                <input type="checkbox" id="molho3" name="molho3" value="Cheddar">
-                <label for="molho3">Cheddar</label>
-                <input type="checkbox" id="molho4" name="molho4" value="Maionese">
-                <label for="molho4">Maionese</label>
-                <input type="checkbox" id="molho5" name="molho5" value="Catupiry">
-                <label for="molho5">Catupiry</label>
-                <input type="checkbox" id="molho6" name="molho6" value="Barbecue">
-                <label for="molho6">Barbecue</label>
+                <input type="checkbox" id="catchup" name="catchup" value="Catchup">
+                <label for="catchup">Catchup</label>
+                <input type="checkbox" id="mostarda" name="mostarda" value="Mostarda">
+                <label for="mostarda">Mostarda</label>
+                <input type="checkbox" id="cheddar" name="cheddar" value="Cheddar">
+                <label for="cheddar">Cheddar</label>
+                <input type="checkbox" id="maionese" name="maionese" value="Maionese">
+                <label for="maionese">Maionese</label>
+                <input type="checkbox" id="catupiry" name="catupiry" value="Catupiry">
+                <label for="catupiry">Catupiry</label>
+                <input type="checkbox" id="barbecue" name="barbecue" value="Barbecue">
+                <label for="barbecue">Barbecue</label>
 
             </div>
          </fieldset>
@@ -115,13 +116,13 @@
         <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Qual tipo de Bebida</strong></label>
-                <select id="bebida">
+                <select name="bebida">
                     <option selected disabled value="">Selecione</option>
-                    <option>Coca-cola</option> 
-                    <option>Fanta</option>
-                    <option>Schweppes </option>
-                    <option>Dell vale </option>
-                    <option>Dolly </option>
+                    <option value="coca-cola">Coca-cola</option> 
+                    <option value="fanta" >Fanta</option>
+                    <option value="schwepps">Schweppes </option>
+                    <option value="dell vale">Dell vale </option>
+                    <option value= "dolly">Dolly </option>
                 </select>    
             </div>         
         </fieldset>    

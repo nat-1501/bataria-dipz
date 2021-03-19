@@ -1,26 +1,26 @@
-<?php //  exit (print_r ($_POST));
+<?php   //  exit (print_r ($_POST));
 include_once "Conexao.php";
 
 try   {
 
-    $nome = filter_var($_POST['nome']);
-    $sobrenome = filter_var($_POST['sobrenome']);
-    $tamanho = filter_var($_POST['tamanho']);
-    $entrega = filter_var($_POST['entrega']);
-    $pagamento = filter_var($_POST['pagamento']);
-    $catchup = filter_var($_POST['catchup']);
-    $mostarda = filter_var($_POST['mostarda']);
-    $barbecue = filter_var($_POST['barbecue']);
-    $cheddar = filter_var($_POST['cheddar']);
-    $catupiry = filter_var($_POST['catupiry']);
-    $maionese = filter_var($_POST['maionese']);
-    $bacon = filter_var($_POST['bacon']);
-    $linguica = filter_var($_POST['linguica']);
-    $queijo_parmesao = filter_var($_POST['queijo_parmesao']);
-    $bebida = filter_var($_POST['bebida']);
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $tamanho = $_POST['tamanho'];
+    $entrega = $_POST['entrega'];
+    $pagamento = $_POST['pagamento'];
+    $catchup = isset($_POST['catchup'])  ?  true : false;
+    $mostarda =  isset($_POST['mostarda']) ?  true : false;
+    $barbecue = isset($_POST['barbecue']) ?  true : false;
+    $cheddar = isset($_POST['cheddar']) ?  true : false;
+    $catupiry = isset($_POST['catupiry']) ?  true : false;
+    $maionese = isset($_POST['maionese']) ?  true : false;
+    $bacon = isset($_POST['bacon'])? true : false;
+    $linguica = isset( $_POST['linguica'])? true : false;
+    $queijo_parmesao = isset( $_POST['queijo_parmesao'])? true : false;
+    $bebida = $_POST['bebida'];
 
 
-    $insert = $conectar->prepare('INSERT INTO pedidos (nome, sobrenome, entrega, tamanho, entrega, pagamento, catchup, mostarda, barbecue, cheddar, catupiry, maionese, bacon, linguica, queijo_parmesao, bebida)
+    $insert = $conectar->prepare('INSERT INTO pedidos (nome, sobrenome, entrega, tamanho, pagamento, catchup, mostarda, barbecue, cheddar, catupiry, maionese, bacon, linguica, queijo_parmesao, bebida)
     VALUES (:nome, :sobrenome, :entrega, :tamanho, :pagamento, :catchup, :mostarda, :barbecue, :cheddar, :catupiry, :maionese, :bacon, :linguica, :queijo_parmesao, :bebida)');
     $insert->bindParam(':nome', $nome);
     $insert->bindParam(':sobrenome', $sobrenome);
@@ -37,10 +37,10 @@ try   {
     $insert->bindParam(':linguica', $linguica);
     $insert->bindParam(':queijo_parmesao', $queijo_parmesao);
     $insert->bindParam(':bebida', $bebida); 
-     exit (print_r ($insert));
+         exit (print_r ($insert));
     $insert->execute(); 
 
-     header("location: formCadastro.php");
+    //  header("location: formCadastro.php");
     echo 'cadastrado com sucesso';
 
 
