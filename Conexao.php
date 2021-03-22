@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 try  {
     //faz conexao com o banco de dados
