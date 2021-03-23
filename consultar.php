@@ -7,9 +7,11 @@ try {
 
     $query->execute();
 
+     //retornando o resultado da consulta
+
     $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    print_r($resultados);
+   // print_r($resultados);
 } catch (PDOException $e) {
     echo 'Falha:' . $e->getMessage();
 }
@@ -40,7 +42,7 @@ try {
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">iD</th>
+                <th scope="col">ID</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>
                 <th scope="col">Entrega</th>
@@ -59,30 +61,31 @@ try {
             </tr>
         </thead>
         <tbody>
-            <script>
-                console.log(<?php $resultados?>)
-            </script>
+            
         <?php
-        if(count($resultados)){
+    
+        if(count($resultados) > 0){  
+           
             foreach($resultados as $result){
                 ?>
                 <tr>
-                    <th scope="row"><?php $result['id'] ?></th>
+                    <th scope="row"><?php echo $result['id'] ?></th>
                     <td><?php echo $result['nome'] ?></td>
                     <td><?php echo $result['sobrenome'] ?></td>
                     <td><?php echo $result['entrega'] ?></td>
                     <td><?php echo $result['tamanho'] ?></td>
-                    <td><?php echo $result['catchup'] ?></td>
-                    <td><?php echo $result['mostarda'] ?></td>
-                    <td><?php echo $result['barbecue'] ?></td>
-                    <td><?php echo $result['cheddar'] ?></td>
-                    <td><?php echo $result['catupiry'] ?></td>
-                    <td><?php echo $result['maionese'] ?></td>
-                    <td><?php echo $result['bacon'] ?></td>
-                    <td><?php echo $result['linguica'] ?></td>
-                    <td><?php echo $result['queijo_parmesao'] ?></td>
+                    <td><?php echo $result['pagamento'] ?></td>
+                    <td><?php echo $result['catchup'] == 1 ?'Sim':'Não'; ?></td>
+                    <td><?php echo $result['mostarda'] == 1 ?'Sim':'Não'; ?></td>
+                    <td><?php echo $result['barbecue'] == 1 ?'Sim':'Não'; ?></td>
+                    <td><?php echo $result['cheddar'] == 1 ?'Sim':'Não';?></td>
+                    <td><?php echo $result['catupiry'] == 1 ?'Sim':'Não';?></td>
+                    <td><?php echo $result['maionese'] == 1 ?'Sim':'Não';?></td>
+                    <td><?php echo $result['bacon'] == 1 ?'Sim':'Não';?></td>
+                    <td><?php echo $result['linguica'] == 1 ?'Sim':'Não'; ?></td>
+                    <td><?php echo $result['queijo_parmesao'] == 1 ?'Sim':'Não'; ?></td>
                     <td><?php echo $result['bebida'] ?></td>
-                    <td><?php echo $result['barbecue'] ?></td>
+                    
                 </tr>
                 <?php
                 }

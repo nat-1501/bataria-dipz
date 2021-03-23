@@ -1,4 +1,4 @@
-<?php   // exit (print_r ($_POST));
+<?php    // exit (print_r ($_POST)) ;
 include_once "Conexao.php";
 
 try   {
@@ -37,7 +37,7 @@ try   {
     $insert->bindParam(':linguica', $linguica);
     $insert->bindParam(':queijo_parmesao', $queijo_parmesao);
     $insert->bindParam(':bebida', $bebida); 
-         exit (print_r ($insert));
+        
     $insert->execute(); 
 
     //  header("location: formCadastro.php");
