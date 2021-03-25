@@ -66,11 +66,13 @@ try {
     
         if(count($resultados) > 0){  
            
+         
+
             foreach($resultados as $result){
                 ?>
                 <tr>
                     <th scope="row"><?php echo $result['id'] ?></th>
-                    <td><?php echo $result['nome'] ?></td>
+                    <td><?php echo $result['nome'] ?></td> 
                     <td><?php echo $result['sobrenome'] ?></td>
                     <td><?php echo $result['entrega'] ?></td>
                     <td><?php echo $result['tamanho'] ?></td>
@@ -85,6 +87,10 @@ try {
                     <td><?php echo $result['linguica'] == 1 ?'Sim':'Não'; ?></td>
                     <td><?php echo $result['queijo_parmesao'] == 1 ?'Sim':'Não'; ?></td>
                     <td><?php echo $result['bebida'] ?></td>
+                    <td> <a class="btn btn-primary" href="formEditar.php?id=<?php echo $result['id']?>">Editar</a> - <a class="btn btn-danger" href="excluir.php?id=$result[id]">Excluir </a ></td>
+
+
+
                     
                 </tr>
                 <?php
