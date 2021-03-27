@@ -1,0 +1,38 @@
+*{
+    margin: 10px;
+    padding: 1px;
+}
+
+body {
+    background-color: rgb(224 193 40 / 62%);
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+#titulo {
+    font-family: sans-serif;
+    color: #bb1f43cf;
+    text-align: center;
+    
+}
+#subtitulo {
+    font-family: sans-serif;
+    color:  #bb1f43cf;
+    text-align: center;
+    font-size: 20px;
+}
+
+ .table table-hover { 
+
+ }
+
+ .table {
+    width: 200%;
+    margin-bottom: 5rem;
+    background-color: transparent;
+    
+}
+
+}

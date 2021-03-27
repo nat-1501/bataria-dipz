@@ -1,3 +1,5 @@
+<?php include_once "formEditar.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,35 +8,28 @@
     <link rel="stylesheet" type="text/css" href="FORMUARIOPEDIDOS.css">
     <title>Pedidos Batataria Dipz</title>
 </head>
-<body>
 
-    
-        <p id="subtitulo">Complete as informaçoes do pedido do Cliente</p>
-        <br>
-    </div>
+<div>
+        <h1 id="titulo">Alterar Pedidos</h1> <br>
+</div>        
 
-    <form action="cadastrar.php" method="post">
-        <fieldset id="campo">
-            <div>
+<fieldset id="campo">
+<div>
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
+                <input type="text" name="nome" id="nome" value=<?php echo $resultado[0]['nome']; ?> required>
 
+  </div>
 
-
-            <div id="campo">
+  <div id="campo">
                 <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-         </fieldset>  
-         
-         
-            
+                <input type="text" name="sobrenome" id="sobrenome" value=<?php echo $resultado[0]['sobrenome']; ?> required>
+            </div> <br>
+        
 
             <div id="campo">
                 <label><strong>Qual o tamanho da batata?</strong></label>
                 <div id="campo">
-                    <input type="radio" name="tamanho" id="Grande" value="Grande" checked>
+                    <input type="radio" name="tamanho" id="Grande" value=Grande<?php echo $resultado[0]['Grande']; ?>>
                     <label for="Grande">Grande</label>
                 </div> 
                 <div id="campo">
@@ -44,7 +39,7 @@
                 <div id="campo"> 
                     <input type="radio" name="tamanho" id="Pequena" value="Pequena">
                     <label for="Pequena">Pequena</label>
-                </div> 
+                </div> <br>
 
                 <div id="campo">
                     <label><strong>Opções de entrega</strong></label>
@@ -59,9 +54,9 @@
                    
                        <input type="radio" name="entrega"id="Local" value="Local"> 
                        <label for="Local">Comer no Local</label>
-                   </div> 
-                
-            </div>
+                   </div> <br>
+
+                   </div>
 
          <fieldset class="grupo">
             <div id="campo">
@@ -77,11 +72,23 @@
             </div>        
             
         </fieldset>
-         
 
+        <div id="campo">
+                    <label><strong>Opções de entrega</strong></label>
+                    <div id="campo">
+                        <input type="radio" name="entrega"id="Delivery" value="Delivery"> 
+                        <label for="Delivery">Delivery</label>
+                   </div>
+                   <div id="campo">
+                       <input type="radio" name="entrega"id="Retirar" value="Retirar"> 
+                       <label for="Retirar">Retirar</label>
+                   
+                   
+                       <input type="radio" name="entrega"id="Local" value="Local"> 
+                       <label for="Local">Comer no Local</label>
+                   </div> 
 
-        
-        <fieldset class="grupo">
+                   <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Selecione os tipos de molhos desejado pelo cliente</strong></label><br>
                 <input type="checkbox" id="catchup" name="catchup" value="Catchup">
@@ -112,7 +119,7 @@
              </div>
          </fieldset>
 
-        <fieldset class="grupo">
+         <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Qual tipo de Bebida</strong></label>
                 <select name="bebida">
@@ -124,17 +131,8 @@
                     <option value= "dolly">Dolly </option>
                 </select>    
             </div>         
-        </fieldset>    
-            
-        
+        </fieldset>
+
         <div>
-            <button id="botão" type="submit">Realizar Pedido</button>
-        </div>  
-
-    </form>
-
-
-    
-
-</body>
-</html>
+            <button id="botão" type="submit">Concluir alteração</button>
+        </div> 

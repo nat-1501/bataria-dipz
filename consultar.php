@@ -25,9 +25,9 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="FORMUARIOPEDIDOS.css">
+    <link rel="stylesheet" type="text/css"  href="tabelaconsulta.css">
 
-    <title>Pedidos Batataria Dipz</title>
+     <title>Consulta Batataria Dipz</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@ try {
     </div>
 
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -87,7 +87,7 @@ try {
                     <td><?php echo $result['linguica'] == 1 ?'Sim':'Não'; ?></td>
                     <td><?php echo $result['queijo_parmesao'] == 1 ?'Sim':'Não'; ?></td>
                     <td><?php echo $result['bebida'] ?></td>
-                    <td> <a class="btn btn-primary" href="formEditar.php?id=<?php echo $result['id']?>">Editar</a> - <a class="btn btn-danger" href="excluir.php?id=$result[id]">Excluir </a ></td>
+                    <td> <a class="btn btn-primary" href="editar.php?id=<?php echo $result['id']?>">Editar</a> - <a class="btn btn-danger" href="excluir.php?id=$result[id]">Excluir </a ></td>
 
 
 
