@@ -39,9 +39,9 @@ try {
     </div>
 
 
-    <table class="table table-hover">
-        <thead>
-            <tr>
+    <table class="table table-hover table-sm table-striped table-bordere d">
+        <thead >
+            <tr id="opcoes">
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>

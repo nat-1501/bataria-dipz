@@ -32,7 +32,13 @@ body {
     width: 200%;
     margin-bottom: 5rem;
     background-color: transparent;
+    borde
     
 }
+
+ #opcoes   {
+    padding: 1px;
+
+ }
 
 }
