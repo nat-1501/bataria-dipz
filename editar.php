@@ -61,9 +61,9 @@
          <fieldset class="grupo">
             <div id="campo">
                 <label><strong>Qual forma de pagamento</strong></label>
-                <select name="pagamento" required>
+                <select name="pagamento" required> <?php $pagamento; ?>
                     <option selected disabled value="">Selecione</option>
-                    <option value="cartao_credito">Cartão de crédito</option> 
+                    <option value= "0" <?=($pagamento == 'cartao_credito')?'selected':''?> >Cartão de crédito</option> 
                     <option value="dinheiro">Dinheiro</option>
                     <option value="cartao_debito">Débito</option>
                      <option value="vale_alimentacao">VA</option>
