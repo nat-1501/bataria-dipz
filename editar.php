@@ -1,4 +1,7 @@
-<?php include_once "formEditar.php"; ?>
+
+<?php include_once "formEditar.php";?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="FORMUARIOPEDIDOS.css">
-    <title>Pedidos Batataria Dipz</title>
+    <title>Alteração de Pedidos </title>
+    
 </head>
 
 <div>
@@ -16,10 +20,12 @@
 <fieldset id="campo">
 <div>
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" value=<?php echo $resultado[0]['nome']; ?> required>
+                <input type="text" name="nome" id="nome" value=<?php echo $resultado[0]['nome'];?> required>
+                
 
   </div>
 
+ <div><?php print_r($resultado) ?> </div>
   <div id="campo">
                 <label for="sobrenome"><strong>Sobrenome</strong></label>
                 <input type="text" name="sobrenome" id="sobrenome" value=<?php echo $resultado[0]['sobrenome']; ?> required>
@@ -29,24 +35,62 @@
             <div id="campo">
                 <label><strong>Qual o tamanho da batata?</strong></label>
                 <div id="campo">
-                    <input type="radio" name="tamanho" id="Grande" value=Grande<?php echo $resultado[0]['Grande']; ?>>
-                    <label for="Grande">Grande</label>
+                    <?php  
+                    if($resultado[0]['tamanho']== "Grande" ){
+
+                        ?>
+                        <input type="radio" name="tamanho" id="grande" value=<?php echo $resultado[0]['tamanho']; ?> checked>
+                        <?php         
+                    } else
+                        ?>
+                        <input type="radio" name="tamanho" id="grande" value=<?php echo $resultado[0]['tamanho']; ?> >
+                        <label for="grande">Grande</label>
+
+                    
+
+                    
                 </div> 
                 <div id="campo">
-                    <input type="radio" name="tamanho" id="Media" value="Media">
+                    <?php
+                    if($resultado[0]["tamanho"]== "Media" ){
+                        ?>
+                    <input type="radio" name="tamanho" id="Media" value=<?php echo $resultado[0]['tamanho']; ?> checked>
+                        <?php
+                    } else
+                        ?> 
+                    <input type="radio" name="tamanho" id="Media" value=<?php echo $resultado[0]['tamanho']; ?> >
                     <label for="Media">Média</label>
+                    
+                    
                 </div>   
                 <div id="campo"> 
-                    <input type="radio" name="tamanho" id="Pequena" value="Pequena">
-                    <label for="Pequena">Pequena</label>
+                    <?php
+                    if($resultado[0]['tamanho']== "Pequena" ){
+                        ?>    
+                    <input type="radio" name="tamanho" id="Pequena" value=<?php echo $resultado[0]['tamanho']; ?> checked>
+                         <?php
+                    } else
+                        ?>
+                    <input type="radio" name="tamanho" id="Pequena" value=<?php echo $resultado[0]['tamanho']; ?>>    
+                    <label for="Pequena">Pequena</label> 
+
                 </div> <br>
 
-                <div id="campo">
+    
                     <label><strong>Opções de entrega</strong></label>
                     <div id="campo">
-                        <input type="radio" name="entrega"id="Delivery" value="Delivery"> 
+                    <?php
+                    if($resultado[0]['entrega']== "Delivery" ) {
+                        ?>
+                    <input type="radio" name="entrega" id="Delivery" value=<?php echo $resultado[0]['entrega'];?> checked>
+                        <?php
+                    } else 
+                        ?>
+                    <input type="radio" name="entrega" id="Delivery" value=<?php echo $resultado[0]['entrega'];?>>
                         <label for="Delivery">Delivery</label>
                    </div>
+
+                   
                    <div id="campo">
                        <input type="radio" name="entrega"id="Retirar" value="Retirar"> 
                        <label for="Retirar">Retirar</label>

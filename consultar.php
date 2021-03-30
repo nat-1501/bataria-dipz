@@ -11,7 +11,7 @@ try {
 
     $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
 
-   // print_r($resultados);
+   //print_r($resultados);
 } catch (PDOException $e) {
     echo 'Falha:' . $e->getMessage();
 }
